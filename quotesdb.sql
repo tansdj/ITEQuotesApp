@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 24, 2018 at 05:23 PM
+-- Generation Time: Apr 29, 2018 at 11:03 AM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.4.3
 
@@ -31,10 +31,18 @@ CREATE TABLE IF NOT EXISTS `tblquotes` (
   `quoteText` text NOT NULL,
   `attributedTo` varchar(50) NOT NULL DEFAULT 'Anonymous',
   `source` varchar(50) DEFAULT NULL,
-  `year` date DEFAULT NULL,
+  `year` year(4) DEFAULT NULL,
   PRIMARY KEY (`quoteId`),
   KEY `attributedTo` (`attributedTo`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `tblquotes`
+--
+
+INSERT INTO `tblquotes` (`quoteId`, `quoteText`, `attributedTo`, `source`, `year`) VALUES
+(3, 'We keep moving forward, opening new doors, and doing new things, because were curious and curiosity keeps leading us down new paths.', '', 'Walt Disney', 1997),
+(4, 'One of the most beautiful qualities of true friendship is to understand and to be understood.', '', 'Lucius Annaeus Seneca', 0000);
 
 -- --------------------------------------------------------
 
@@ -49,7 +57,15 @@ CREATE TABLE IF NOT EXISTS `tblusers` (
   `userType` varchar(6) NOT NULL,
   PRIMARY KEY (`userId`),
   UNIQUE KEY `userEmail` (`userEmail`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `tblusers`
+--
+
+INSERT INTO `tblusers` (`userId`, `userEmail`, `userPassword`, `userType`) VALUES
+(2, 'tansdj@gmail.com', 'SaXk9aKQvKF/2', 'Admin'),
+(5, 'anyone@gmail.com', 'SaXk9aKQvKF/2', 'Reader');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
