@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 29, 2018 at 11:03 AM
+-- Generation Time: Apr 29, 2018 at 11:15 AM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.4.3
 
@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `tblusers` (
   `userType` varchar(6) NOT NULL,
   PRIMARY KEY (`userId`),
   UNIQUE KEY `userEmail` (`userEmail`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `tblusers`
@@ -65,7 +65,8 @@ CREATE TABLE IF NOT EXISTS `tblusers` (
 
 INSERT INTO `tblusers` (`userId`, `userEmail`, `userPassword`, `userType`) VALUES
 (2, 'tansdj@gmail.com', 'SaXk9aKQvKF/2', 'Admin'),
-(5, 'anyone@gmail.com', 'SaXk9aKQvKF/2', 'Reader');
+(5, 'anyone@gmail.com', 'SaXk9aKQvKF/2', 'Editor'),
+(6, 'reader@gmail.com', 'SaXk9aKQvKF/2', 'Reader');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
