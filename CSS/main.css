@@ -10,8 +10,12 @@ h2{box-shadow: 5px 5px 10px 0 white inset, -5px -5px 10px 0 white inset; border-
 .menu a{text-decoration: none;font-family: 'Viner Hand ITC';font-size: 200%;color: gray;padding-right: 10%}
 .nav{position: relative;left: 3%;bottom: -10%}
 h3{border-left: 5px red solid;border-right: 5px red solid;text-align: center;background-color: gray;color: red}
-.regButton{background-color: gray;color: white;}
+.regButton{background-color: #031900;color: white;}
 .regButton{width: 70%;margin-left: 15%;padding: 0.4%}
 .links{margin-left: 15%;color: gray;}
-.form{background-color: #EEEEE0;border: 5px outset #031900;opacity: 0.8}
+.form{background-color: #EEEEE0;box-shadow: 5px 5px;opacity: 0.8}
 .bodyHeadings{font-family: 'Lucida Handwriting';text-align: center}
+.quoteText{font-family: 'French Script MT';font-size: 200%;text-align: center}
+.source{font-family:'Bradley Hand ITC';text-align: center}
+.attributedTo{font-family:'Bradley Hand ITC';text-align: center}
+.AltLinks{margin-left: 1%;color: gray;text-decoration: none}

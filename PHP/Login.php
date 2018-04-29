@@ -31,7 +31,7 @@ require '../Classes/UserClass.php';
             }else{
             header('Location: ../index.php');}
         }
-        ?>
+        ?>   
     </body>
 </html>
 

@@ -4,7 +4,7 @@ function validateRegistration(){
     $valid=true;
     $success_all = array();
     
-    $success = validateEmail('txtQuote');
+    $success = validateEmail('txtEmail');
     array_push($success_all, $success);
     $success = validatePassword('txtPassword', 'txtRePassword');
     array_push($success_all, $success);

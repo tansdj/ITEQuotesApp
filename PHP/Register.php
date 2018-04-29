@@ -6,7 +6,7 @@ require_once './SessionHandler.php';
 session_start();
 if (isset($_SESSION['QuotesType'])){
     if($_SESSION['QuotesType']=="Admin"){
-        include './HTML/AdminHeader.html';
+        include '/../HTML/AdminHeader.html';
         }
     elseif (($_SESSION['QuotesType']=="Editor")) {
         include './HTML/EditorHeader.html';

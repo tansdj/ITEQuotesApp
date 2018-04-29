@@ -19,8 +19,12 @@ function displayReaderStyleQuote($quote){
     $quoteSource = str_replace("<", '*', $quoteSource);
     $quoteSource = str_replace(">", "*", $quoteSource);
     echo "<section class='form'><p class='quoteText'>'$quoteText'</p>";
-    echo "<p class='source'>$quoteSource($quoteYear)</p>";
-    echo "<p class='attributedTo'>Attributed to: $quoteAttr</p></section><br>";
+    if($quoteYear!=0000){
+    echo "<p class='source'>-$quoteSource($quoteYear)</p>";}
+    else{echo "<p class='source'>-$quoteSource</p>";}
+    if($quoteAttr!=""){
+    echo "<p class='attributedTo'>Attributed to: $quoteAttr</p>";}
+    echo '</section><br>';
 }
 
 function displayAdminEditorStyleQuote($quote){
@@ -41,9 +45,12 @@ function displayAdminEditorStyleQuote($quote){
     $quoteSource = str_replace("<", '*', $quoteSource);
     $quoteSource = str_replace(">", "*", $quoteSource);
     echo "<section class='form'><p class='quoteText'>'$quoteText'</p>";
-    echo "<p class='source'>$quoteSource($quoteYear)</p>";
-    echo "<p class='attributedTo'>Attributed to: $quoteAttr</p>";
-    echo "<a class='links' href='./PHP/UpdateQuote.php?quoteId=$quoteId'>Edit</a><a class='links' href='./PHP/QuoteRemove.php?quoteId=$quoteId'>Delete</a></section><br>";
+    if($quoteYear!=0000){
+    echo "<p class='source'>-$quoteSource($quoteYear)</p>";}
+    else{echo "<p class='source'>-$quoteSource</p>";}
+    if($quoteAttr!=""){
+    echo "<p class='attributedTo'>Attributed to: $quoteAttr</p>";}
+    echo "<a class='AltLinks' href='./PHP/UpdateQuote.php?quoteId=$quoteId'>Edit</a><a class='AltLinks' href='./PHP/QuoteRemove.php?quoteId=$quoteId'>Delete</a></section><br>";
 }
 
 function displayUserDetails($user){
@@ -54,7 +61,7 @@ function displayUserDetails($user){
     $type = $u->getType();
     echo "<section class='form'><p class='userDet'>User Email: $email</p>";
     echo "<p class='userDet'>User Type: $type</p>";
-    echo "<a class='links' href='./UpdateUser.php?userId=$id'>Edit</a><a class='links' href='./UserRemove.php?userId=$id'>Delete</a></section><br>";
+    echo "<a class='AltLinks' href='./UpdateUser.php?userId=$id'>Edit</a><a class='AltLinks' href='./UserRemove.php?userId=$id'>Delete</a></section><br>";
 }
 function displayUserDetailsWithoutOptions($user){
     $u = new User(NULL,"","","");
